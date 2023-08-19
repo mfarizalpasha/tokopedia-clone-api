@@ -1,5 +1,3 @@
-require("dotenv").config();
-
 const express = require("express");
 const bodyParser = require("body-parser");
 const connectDB = require("./utils/db");
@@ -14,6 +12,13 @@ app.use(bodyParser.json());
 app.use("/videos", videoRoutes);
 app.use("/products", productRoutes);
 app.use("/comments", commentRoutes);
+
+app.get("/", (req, res) => {
+  res.json({
+    API_list:
+      "https://gist.github.com/mfarizalpasha/46f488af9aa27988803ae3decf917c48",
+  });
+});
 
 connectDB().then(() => {
   app.listen(5000, () => {
