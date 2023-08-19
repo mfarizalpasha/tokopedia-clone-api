@@ -1,9 +1,12 @@
 const mongoose = require("mongoose");
 const config = require("../config");
 
+const uri =
+  "mongodb+srv://mfarizalpasha:gomuno52431@cluster0.fuexwnx.mongodb.net/tokopedia-play-clone-app";
+
 const connectDB = async () => {
   try {
-    await mongoose.connect(config.dbURI, {
+    await mongoose.connect(uri, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
