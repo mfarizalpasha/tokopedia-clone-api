@@ -1,5 +1,25 @@
 {
   "version": 2,
   "builds": [{ "src": "app.js", "use": "@vercel/node" }],
-  "routes": [{ "src": "/(.*)", "dest": "app.js" }]
+  "routes": [
+    { "src": "/", "dest": "app.js" },
+    {
+      "src": "/videos",
+      "dest": "app.js",
+      "methods": ["GET"],
+      "config": { "maxDuration": 30 }
+    },
+    {
+      "src": "/products",
+      "dest": "app.js",
+      "methods": ["GET"],
+      "config": { "maxDuration": 30 }
+    },
+    {
+      "src": "/comments",
+      "dest": "app.js",
+      "methods": ["GET"],
+      "config": { "maxDuration": 30 }
+    }
+  ]
 }
