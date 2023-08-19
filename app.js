@@ -27,3 +27,5 @@ connectDB().then(() => {
     console.log("Server is running on http://localhost:5000");
   });
 });
+
+module.exports = app;
