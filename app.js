@@ -15,13 +15,6 @@ app.use("/videos", videoRoutes);
 app.use("/products", productRoutes);
 app.use("/comments", commentRoutes);
 
-app.get("/", (req, res) => {
-  res.json({
-    API_list:
-      "https://gist.github.com/mfarizalpasha/46f488af9aa27988803ae3decf917c48",
-  });
-});
-
 connectDB().then(() => {
   app.listen(5000, () => {
     console.log("Server is running on http://localhost:5000");
