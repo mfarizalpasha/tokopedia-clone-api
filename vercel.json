@@ -2,9 +2,9 @@
   "version": 2,
   "builds": [{ "src": "app.js", "use": "@vercel/node" }],
   "routes": [
-    { "src": "/videos", "dest": "app.js" },
-    { "src": "/products", "dest": "app.js" },
-    { "src": "/comments", "dest": "app.js" },
+    { "src": "/videos", "dest": "videoRoutes.js" },
+    { "src": "/products", "dest": "productRoutes.js" },
+    { "src": "/comments", "dest": "commentRoutes.js" },
     { "src": "/", "dest": "app.js" }
   ]
 }
