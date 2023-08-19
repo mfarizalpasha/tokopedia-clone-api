@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const config = require("../config");
+// const config = require("../config");
 
 const uri =
   "mongodb+srv://mfarizalpasha:gomuno52431@cluster0.fuexwnx.mongodb.net/tokopedia-play-clone-app";
